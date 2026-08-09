@@ -147,13 +147,10 @@
     function initAOS() {
         if (typeof AOS === 'undefined') return;
         AOS.init({ duration: 700, once: true, offset: 40 });
-        // Imagens (hero, cards) mudam a altura da página depois do init inicial —
-        // sem isso, os offsets de scroll calculados ficam errados e elementos
-        // acima da dobra podem nunca receber a classe aos-animate.
-        window.addEventListener('load', function () { AOS.refreshHard(); });
-        document.querySelectorAll('img').forEach(function (img) {
-            if (!img.complete) img.addEventListener('load', function () { AOS.refreshHard(); }, { once: true });
-        });
+        // Imagens carregando depois do init mudam a altura da página — um único
+        // refresh (não "hard") no load recalcula os offsets sem resetar elementos
+        // que já animaram, evitando o efeito de "fantasma" na primeira dobra.
+        window.addEventListener('load', function () { AOS.refresh(); });
     }
 
     function initImageFallback() {
