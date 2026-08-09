@@ -1,0 +1,4 @@
+node_modules/
+dist/
+sitemap.xml
+assets/css/tailwind-built.css

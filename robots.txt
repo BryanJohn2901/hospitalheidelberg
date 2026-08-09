@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hospitalheidelberg.com.br/sitemap.xml

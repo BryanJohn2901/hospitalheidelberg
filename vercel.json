@@ -1,0 +1,127 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.hospitalheidelberg.com.br" }],
+      "destination": "https://hospitalheidelberg.com.br/:path*",
+      "permanent": true
+    },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+
+    { "source": "/o-hospital", "destination": "/quem-somos/", "permanent": true },
+    { "source": "/o-hospital/", "destination": "/quem-somos/", "permanent": true },
+    { "source": "/infraestrutura", "destination": "/quem-somos/#infraestrutura", "permanent": true },
+    { "source": "/infraestrutura/", "destination": "/quem-somos/#infraestrutura", "permanent": true },
+    { "source": "/equipe-multidisciplinar", "destination": "/quem-somos/#equipe", "permanent": true },
+    { "source": "/equipe-multidisciplinar/", "destination": "/quem-somos/#equipe", "permanent": true },
+
+    { "source": "/ambulatorio", "destination": "/servicos-atuacao/#ambulatorio", "permanent": true },
+    { "source": "/ambulatorio/", "destination": "/servicos-atuacao/#ambulatorio", "permanent": true },
+    { "source": "/atendimento-24-horas", "destination": "/servicos-atuacao/#atendimento-24-horas", "permanent": true },
+    { "source": "/atendimento-24-horas/", "destination": "/servicos-atuacao/#atendimento-24-horas", "permanent": true },
+    { "source": "/integracao-integral", "destination": "/servicos-atuacao/#internacao-integral", "permanent": true },
+    { "source": "/integracao-integral/", "destination": "/servicos-atuacao/#internacao-integral", "permanent": true },
+    { "source": "/hospital-dia", "destination": "/servicos-atuacao/#hospital-dia", "permanent": true },
+    { "source": "/hospital-dia/", "destination": "/servicos-atuacao/#hospital-dia", "permanent": true },
+    { "source": "/prodep", "destination": "/servicos-atuacao/#prodep", "permanent": true },
+    { "source": "/prodep/", "destination": "/servicos-atuacao/#prodep", "permanent": true },
+
+    { "source": "/hospital-escola", "destination": "/ensino/", "permanent": true },
+    { "source": "/hospital-escola/", "destination": "/ensino/", "permanent": true },
+    { "source": "/programa-de-especializacao", "destination": "/ensino/#especializacao", "permanent": true },
+    { "source": "/programa-de-especializacao/", "destination": "/ensino/#especializacao", "permanent": true },
+    { "source": "/residencia-medica", "destination": "/ensino/#residencia", "permanent": true },
+    { "source": "/residencia-medica/", "destination": "/ensino/#residencia", "permanent": true },
+
+    { "source": "/site/convenios", "destination": "/convenios/", "permanent": true },
+    { "source": "/site/convenios/", "destination": "/convenios/", "permanent": true },
+    { "source": "/como-chegar", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/como-chegar/", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/agendamento-de-consulta", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/agendamento-de-consulta/", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/contato", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/contato/", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/noticias", "destination": "/blog/", "permanent": true },
+    { "source": "/noticias/", "destination": "/blog/", "permanent": true },
+    { "source": "/sitemap", "destination": "/", "permanent": true },
+    { "source": "/sitemap/", "destination": "/", "permanent": true },
+    { "source": "/politica-de-privacidade.html", "destination": "/politica-de-privacidade/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/:path*.(jpg|jpeg|png|svg|webp|ico|gif|avif|woff|woff2|ttf|otf|pdf)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600" }
+      ]
+    },
+    {
+      "source": "/build-meta.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/build-id.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "missing": [
+        { "type": "extension" }
+      ],
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), camera=(), microphone=(), payment=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
+      ]
+    }
+  ]
+}

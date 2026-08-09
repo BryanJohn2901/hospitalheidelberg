@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias | Hospital Heidelberg</title>
+    <meta name="description" content="Novidades, notícias, cursos e eventos sobre o Hospital Heidelberg e sobre psiquiatria.">
+    <link rel="canonical" href="https://hospitalheidelberg.com.br/blog/">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Hospital Heidelberg">
+    <meta property="og:title" content="Notícias | Hospital Heidelberg">
+    <meta property="og:description" content="Novidades, notícias, cursos e eventos sobre o Hospital Heidelberg e sobre psiquiatria.">
+    <meta property="og:image" content="https://hospitalheidelberg.com.br/assets/images/logo.png">
+    <meta property="og:url" content="https://hospitalheidelberg.com.br/blog/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="stylesheet" href="/assets/css/tailwind-built.css">
+</head>
+<body class="font-sans text-palette-500 bg-white antialiased" data-page="blog">
+
+    <header id="header" class="fixed w-full top-0 z-50 transition-all duration-500">
+        <div class="bg-brand-dark text-palette-200 text-xs sm:text-sm tracking-widest uppercase hidden sm:block">
+            <div class="container mx-auto px-6 py-3.5 flex justify-between items-center font-sans min-h-[44px]">
+                <div class="flex items-center gap-3">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-teal animate-pulse"></span>
+                    <span class="text-gray-200 font-medium tracking-wider">Hospital Heidelberg — Psiquiatria desde 1975</span>
+                </div>
+                <div class="flex items-center gap-6">
+                    <a href="tel:+554133204900" class="hover:text-brand-teal transition-colors flex items-center gap-2"><i class="fa-solid fa-phone"></i> (41) 3320-4900</a>
+                    <div class="w-px h-3 bg-gray-700 mx-1"></div>
+                    <div class="flex items-center gap-4">
+                        <a href="mailto:info@clinicaheidelberg.com.br" class="hover:text-brand-teal transition-colors" aria-label="E-mail" rel="noopener"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#" class="js-whatsapp hover:text-brand-teal transition-colors" aria-label="WhatsApp" rel="noopener noreferrer" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav bg-white/85 backdrop-blur-xl border-b border-gray-200/50 shadow-[0_8px_30px_rgb(0,0,0,0.06)] transition-all duration-300">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center gap-4">
+                <a href="/" class="flex items-center shrink-0 group" aria-label="Hospital Heidelberg — Home">
+                    <img loading="lazy" decoding="async" src="/assets/images/logo.png" alt="Hospital Heidelberg" width="235" height="125" class="h-14 sm:h-16 w-auto max-w-[220px] object-contain object-left transition-opacity duration-300 group-hover:opacity-90">
+                </a>
+                <nav class="hidden lg:flex items-center gap-2 text-[15px] font-medium text-gray-600 font-sans">
+                    <a href="/" class="px-5 py-2.5 rounded-lg transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Home</a>
+                    <a href="/servicos-atuacao/" class="px-5 py-2.5 rounded-lg transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Tratamentos</a>
+                    <a href="/ensino/" class="px-5 py-2.5 rounded-lg transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Ensino</a>
+                    <a href="/quem-somos/" class="px-5 py-2.5 rounded-lg transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a>
+                    <a href="/convenios/" class="px-5 py-2.5 rounded-lg transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Convênios</a>
+                    <a href="/blog/" class="nav-link-active px-5 py-2.5 rounded-lg transition-all duration-300">Notícias</a>
+                    <a href="/fale-conosco/" class="px-5 py-2.5 rounded-lg transition-all duration-300 hover:bg-brand-teal/5 hover:text-brand-teal">Fale Conosco</a>
+                </nav>
+                <div class="flex items-center gap-3 lg:gap-4">
+                    <a href="#" class="js-whatsapp-open btn-nav-cta hidden lg:inline-flex" aria-label="Fale com a equipe pelo WhatsApp"><span>Fale pelo WhatsApp</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                    <button type="button" id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-brand-dark border border-gray-200 rounded-lg hover:bg-gray-50 transition" aria-label="Menu"><i class="fa-solid fa-bars-staggered"></i></button>
+                </div>
+            </div>
+            <nav id="mobileMenu" class="lg:hidden" aria-label="Menu mobile">
+                <a href="#" class="js-whatsapp-open btn-nav-cta btn-nav-cta--mobile lg:hidden" aria-label="Fale com a equipe pelo WhatsApp"><span>Fale pelo WhatsApp</span><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Home</a>
+                <a href="/servicos-atuacao/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Tratamentos</a>
+                <a href="/ensino/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Ensino</a>
+                <a href="/quem-somos/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Quem Somos</a>
+                <a href="/convenios/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Convênios</a>
+                <a href="/blog/" class="nav-link-active px-4 py-3 rounded-xl transition-colors">Notícias</a>
+                <a href="/fale-conosco/" class="px-4 py-3 rounded-xl transition-colors hover:bg-brand-teal/5 hover:text-brand-teal">Fale Conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero page-hero--light page-hero--center" style="padding-top:9rem;">
+            <div class="container mx-auto px-6">
+                <div class="page-hero__content max-w-2xl" data-aos="fade-up">
+                    <p class="page-hero__eyebrow">Notícias</p>
+                    <h1 class="page-hero__title">Em construção</h1>
+                    <p class="page-hero__subtitle">Em breve, publicaremos aqui novidades, cursos e eventos sobre o Hospital Heidelberg e sobre psiquiatria.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section-page bg-white text-center">
+            <div class="container mx-auto px-6">
+                <a href="#" class="js-whatsapp btn-whatsapp" data-whatsapp-page="blog">Falar com a equipe <i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-brand-dark text-white pt-12 pb-8 border-t border-white/10 font-sans">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xs text-gray-400 mb-4">Diretor Técnico-Médico: Dr. Roberto Ratzke — CRM/PR 17494, RQE 11200. Hospital Heidelberg — CRM (PJ) 33.</p>
+            <p class="text-xs text-gray-500">&copy; <span id="footer-year"></span> Hospital Heidelberg. <a href="/" class="hover:text-brand-teal">Voltar para o site</a></p><p class="text-xs text-gray-500 mt-1">Desenvolvido por <a href="https://www.instagram.com/comunicore_br/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-teal font-semibold">Comunicore</a></p>
+        </div>
+    </footer>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/whatsapp.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

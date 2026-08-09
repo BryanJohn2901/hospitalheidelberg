@@ -1,0 +1,105 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.supramedsaude.com.br" }],
+      "destination": "https://supramedsaude.com.br/:path*",
+      "permanent": true
+    },
+    { "source": "/contato", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/contato/", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/contato.html", "destination": "/fale-conosco/", "permanent": true },
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/blog/ppp-saude", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/ppp-saude/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/hospital-pinhais", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/hospital-pinhais/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/gestao-equipes", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/gestao-equipes/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/governanca", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/governanca/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/tecnologia-integrada", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/tecnologia-integrada/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/humanizacao", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/humanizacao/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/engenharia-clinica", "destination": "/blog/hospital-feira-de-santana/", "permanent": true },
+    { "source": "/blog/engenharia-clinica/", "destination": "/blog/hospital-feira-de-santana/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/:path*.(jpg|jpeg|png|svg|webp|ico|gif|avif|woff|woff2|ttf|otf|pdf)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600" }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=3600, stale-while-revalidate=600" }
+      ]
+    },
+    {
+      "source": "/build-meta.json",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/build-id.txt",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "missing": [
+        { "type": "extension" }
+      ],
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), camera=(), microphone=(), payment=()" },
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" }
+      ]
+    }
+  ]
+}
