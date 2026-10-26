@@ -13,7 +13,7 @@ window.HEIDELBERG_CONFIG = {
     whatsappLabel: 'Fale Conosco',
     whatsappWidgetTitle: 'Hospital Heidelberg',
     whatsappWidgetGreeting: 'Olá! Sou do Hospital Heidelberg. Como posso ajudar você ou um familiar hoje?',
-    whatsappWidgetLogo: '/assets/images/logo.png',
+    whatsappWidgetLogo: '/assets/images/logo.webp',
     /** Mensagens por página (data-page no <body>, ou data-whatsapp-page no elemento) */
     whatsappMessages: {
         default: 'Olá, Hospital Heidelberg! Cheguei pelo site e gostaria de mais informações.',

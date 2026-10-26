@@ -55,7 +55,7 @@
         var greeting =
             cfg.whatsappWidgetGreeting ||
             'Olá! Conte sobre seu projeto de saúde, PPP ou gestão hospitalar — respondemos pelo WhatsApp.';
-        var logo = cfg.whatsappWidgetLogo || '/assets/images/logo.png';
+        var logo = cfg.whatsappWidgetLogo || '/assets/images/logo.webp';
 
         var root = document.createElement('div');
         root.id = 'whatsapp-widget-root';
